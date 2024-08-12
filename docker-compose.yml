@@ -24,13 +24,12 @@ services:
       PMA_HOST: db
       PMA_PORT: 3306
 
+  services:
   db:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydatabase
-      MYSQL_USER: root
-      MYSQL_PASSWORD: 1111
+      MYSQL_ROOT_PASSWORD: 1111  # รหัสผ่านสำหรับ root
+      MYSQL_DATABASE: mydatabase  # ชื่อฐานข้อมูลเริ่มต้น
     volumes:
       - db_data:/var/lib/mysql
 
